@@ -60,9 +60,7 @@ void swap(Task *a, Task *b) {
     *b = temp;
 }
 
-/// @brief Function to sort tasks based on their periods in case not in order
-/// @param tasks list of tasks
-/// @param size amount of tasks in the list
+
 void sort_tasks(Task tasks[], int size) {
     for (int i = 0; i < size - 1; i++) {
         for (int j = 0; j < size - i - 1; j++) {
@@ -226,12 +224,7 @@ void check_edf(Task *tasks, int n, int time){
     
 }
 
-
-
-/// In this function you should write an earliest deadline first scheduler.
-/// Read the description of the `schedule` function below to read about the properties of this function.
 void earliest_deadline_first(Task *tasks, int n, int max_time) {
-    // You can initialize the new fields of your tasks here. This only runs the first time.
     int time = -1;
     int L_max = 0;
     while (time < max_time){
